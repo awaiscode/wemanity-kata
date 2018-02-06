@@ -8,8 +8,8 @@
     <ProjectGuid>{158BEF85-41BE-4260-877C-0E32D1C8AF07}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ServiceIrisRapports</RootNamespace>
-    <AssemblyName>ServiceIrisRapportsNew</AssemblyName>
+    <RootNamespace>ServiceMultiProcess</RootNamespace>
+    <AssemblyName>ServiceMultiProcess</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -100,7 +100,7 @@
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

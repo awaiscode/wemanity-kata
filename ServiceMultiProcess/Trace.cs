@@ -13,13 +13,11 @@ namespace ServiceMultiProcess
         /// </summary>
         /// <param name="text"> Text to write in the trace file for error handling</param>
         public static void WriteLog(string text)
-        {
-            #if DEBUG
-            StreamWriter SW = new StreamWriter("C:\\Users\\M4482362\\Desktop\\logs\\trace.txt", true);
+        {           
+            StreamWriter SW = new StreamWriter("D:\\logs\\trace.txt", true);
             SW.WriteLine(text);
             SW.Flush();
-            SW.Close();
-            #endif
+            SW.Close();           
         }
     }
 }

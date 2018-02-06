@@ -18,6 +18,7 @@ namespace ServiceMultiProcess
         //Global Variable
         Thread MyProcess;
         static string ConnString = "Your database connection string";        
+        int MaxProcess = 4; //Number of multiple processes allowed at one time
 
 
         /// <summary>
@@ -36,6 +37,7 @@ namespace ServiceMultiProcess
             }                 
         }
 
+        
         protected override void OnStart(string[] array)
         {
             MyProcess.Start();
@@ -81,7 +83,7 @@ namespace ServiceMultiProcess
         /// Business Logic to launch a reporting application that servers reports for the users that demands reports from the web interface
         /// Oracle DB and a view have been used to fetch the data from Oracle if there are some report requests
         /// </summary>
-        public static void LaunchThreads()
+        public void LaunchThreads()
         {
          
             try
@@ -124,7 +126,7 @@ namespace ServiceMultiProcess
                             Process[] processes = Process.GetProcessesByName("FILLREPORT");
                             
                             // To launch maximum 4 process at a time
-                            if (processes.Count() < 4)
+                            if (processes.Count() < MaxProcess)
                             {
                                 Process p = Process.Start(@"D:\\BusinessReportsApp\\CreateReport.exe");
                                 Conn.Close();
